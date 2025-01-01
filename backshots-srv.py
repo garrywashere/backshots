@@ -2,7 +2,7 @@ from flask import Flask, render_template, request
 
 app = Flask(__name__)
 
-round_info = {"lives": 1, "blanks": 2, "probability": "50%"}
+round_info = {"lives": 0, "blanks": 0, "probability": ""}
 
 
 @app.route("/")

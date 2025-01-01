@@ -1,0 +1,95 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Press Start 2P", monospace;
+    background-color: #000;
+    color: #0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.terminal-container {
+    width: 90%;
+    max-width: 600px;
+    background-color: #111;
+    border: 2px solid #0f0;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    box-shadow: 0 0 20px rgba(0, 255, 0, 0.5);
+}
+
+.terminal-header {
+    text-align: center;
+    border-bottom: 2px solid #0f0;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+
+.terminal-header h1 {
+    font-size: 18px;
+    margin: 0;
+    text-transform: uppercase;
+}
+
+.terminal-main {
+    flex-grow: 1;
+    text-align: center;
+}
+
+.terminal-main p {
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.button-group {
+    display: flex;
+    justify-content: space-around;
+}
+
+button {
+    background-color: #000;
+    color: #0f0;
+    font-family: "Press Start 2P", monospace;
+    font-size: 12px;
+    padding: 10px 20px;
+    border: 2px solid #0f0;
+    border-radius: 4px;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+button:hover {
+    background-color: #0f0;
+    color: #000;
+}
+
+.terminal-footer {
+    text-align: center;
+    border-top: 2px solid #0f0;
+    padding-top: 10px;
+    margin-top: 10px;
+}
+
+.terminal-footer p {
+    font-size: 12px;
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    .terminal-container {
+        padding: 15px;
+    }
+
+    .terminal-header h1 {
+        font-size: 16px;
+    }
+
+    button {
+        padding: 8px 16px;
+        font-size: 10px;
+    }
+}

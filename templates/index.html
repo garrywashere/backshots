@@ -1,9 +1,36 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
-        
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Backshots</title>
+        <link
+            rel="icon"
+            href="{{ url_for('static', filename='images/dealer.png') }}"
+        />
+        <link
+            rel="stylesheet"
+            href="{{ url_for('static', filename='style.css') }}"
+        />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
+            rel="stylesheet"
+        />
     </head>
     <body>
-
+        <div class="terminal-container">
+            <header class="terminal-header">
+                <h1>BACKSHOTS</h1>
+            </header>
+            <main class="terminal-main">
+                <p>Welcome to Backshots, a tracker for Buckshot Roulette.</p>
+                <div class="button-group">
+                    <button onclick="">Start</button>
+                </div>
+            </main>
+            <footer class="terminal-footer">
+                <p>&copy; 1998 garrynet</p>
+            </footer>
+        </div>
     </body>
 </html>

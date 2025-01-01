@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Backshots</title>
+        <link
+            rel="icon"
+            href="{{ url_for('static', filename='images/dealer.png') }}"
+        />
+        <link
+            rel="stylesheet"
+            href="{{ url_for('static', filename='style.css') }}"
+        />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
+            rel="stylesheet"
+        />
+    </head>
+    <body>
+        <div class="terminal-container">
+            <header class="terminal-header">
+                <h1>NEW_ROUND.dll</h1>
+            </header>
+            <main class="terminal-main">
+                <p>Enter How Many Live and Blank Rounds:</p>
+                <form
+                    class="terminal-form"
+                    action="/current_round"
+                    method="post"
+                >
+                    <label for="live">Live:</label>
+                    <input
+                        type="number"
+                        id="live"
+                        name="live"
+                        placeholder="Live Rounds"
+                        min="1"
+                        max="8"
+                        required
+                    />
+
+                    <label for="blank">Blanks:</label>
+                    <input
+                        type="number"
+                        id="blank"
+                        name="blank"
+                        placeholder="Blank Rounds"
+                        min="1"
+                        max="8"
+                        required
+                    />
+
+                    <button type="submit">Submit</button>
+                </form>
+            </main>
+            <footer class="terminal-footer">
+                <p>&copy; 1998 garrynet</p>
+            </footer>
+        </div>
+    </body>
+</html>

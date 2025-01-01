@@ -20,13 +20,31 @@
     <body>
         <div class="terminal-container">
             <header class="terminal-header">
-                <h1>BACKSHOTS.exe</h1>
+                <h1>CURRENT_ROUND.elf</h1>
             </header>
             <main class="terminal-main">
-                <p>Welcome to Backshots, a tracker for Buckshot Roulette.</p>
+                <p>Current Rounds:</p>
+                <div class="rounds">
+                    <p>Live: {{ round_info["lives"] }}</p>
+                    {% for live in range(round_info["lives"]) %}
+                    <img
+                        src="{{ url_for('static', filename='images/live.png') }}"
+                    />
+                    {% endfor %}
+                    <p>Blanks: {{ round_info["blanks"] }}</p>
+                    {% for blank in range(round_info["blanks"]) %}
+                    <img
+                        src="{{ url_for('static', filename='images/blank.png') }}"
+                    />
+                    {% endfor %}
+                </div>
+                <div class="probability">
+                    <p>Probability:</p>
+                    <h2>{{ round_info["probability"] }}</h2>
+                </div>
                 <div class="button-group">
                     <button onclick="window.location.href='/new_round'">
-                        Start
+                        New Round
                     </button>
                 </div>
             </main>

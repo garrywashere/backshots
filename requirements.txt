@@ -1,10 +1,12 @@
 blinker==1.9.0
 click==8.1.8
 Flask==3.1.0
+gunicorn==23.0.0
 inquirerpy==0.3.4
 itsdangerous==2.2.0
 Jinja2==3.1.5
 MarkupSafe==3.0.2
+packaging==24.2
 pfzy==0.3.4
 prompt_toolkit==3.0.48
 wcwidth==0.2.13

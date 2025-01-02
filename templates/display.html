@@ -1,0 +1,25 @@
+{% extends "template.html" %} {% block main %}
+<p>Current Rounds:</p>
+<div class="rounds">
+    <p>Live: {{ counters["live"] }}</p>
+    {% for live in range(counters["live"]) %}
+    <!-- <img src="{{ url_for('static', filename='images/live.png') }}" /> -->
+    🟥 {% endfor %}
+    <p>Blanks: {{ counters["blank"] }}</p>
+    {% for blank in range(counters["blank"]) %}
+    <!-- <img src="{{ url_for('static', filename='images/blank.png') }}" /> -->
+    🟦 {% endfor %}
+</div>
+<div class="probability">
+    <p>Probability:</p>
+    <h2>{{ counters["probability"] }}%</h2>
+</div>
+<div class="button-group">
+    {% if counters["live"] > 0 and counters["blank"] > 0 %}
+    <button onclick="sub_live()">Live</button>
+    <button onclick="sub_blank()">Blank</button>
+    {% else %}
+    <button onclick="window.location.href='/input'">Done</button>
+    {% endif %}
+</div>
+{% endblock %}

@@ -1,0 +1,29 @@
+{% extends "template.html" %} {% block main %}
+<p>Enter How Many Live and Blank Rounds:</p>
+<form class="terminal-form" action="/submit" method="POST">
+    <label for="live">Live:</label>
+    <input
+        type="number"
+        id="live"
+        name="live"
+        placeholder="Live Rounds"
+        min="1"
+        max="8"
+        autofocus
+        required
+    />
+
+    <label for="blank">Blanks:</label>
+    <input
+        type="number"
+        id="blank"
+        name="blank"
+        placeholder="Blank Rounds"
+        min="1"
+        max="8"
+        required
+    />
+
+    <button type="submit">Submit</button>
+</form>
+{% endblock %}
